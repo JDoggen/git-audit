@@ -2,7 +2,7 @@
 
 > Lightweight CLI to audit multiple git repository statuses at once
 
-[![npm version](https://badge.fury.io/js/git-status.svg)](https://badge.fury.io/js/git-status)![NPM Downloads](https://img.shields.io/npm/dw/git-audit)![NPM License](https://img.shields.io/npm/l/git-audit)
+[![npm version](https://badge.fury.io/js/git-audit.svg)](https://badge.fury.io/js/git-audit)![NPM Downloads](https://img.shields.io/npm/dw/git-audit)![NPM License](https://img.shields.io/npm/l/git-audit)
 
 ![](header.png)
 
@@ -32,7 +32,7 @@ git-audit [directory] [--max-depth={2}]
 
 ## Release History
 
-* 1.0.2
+* 1.0.3
     * CHANGE: Added Readme
     * CHANGE: Replaced string#replaceAll() with custom function
 * 1.0.1
