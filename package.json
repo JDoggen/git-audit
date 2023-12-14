@@ -1,6 +1,6 @@
 {
   "name": "git-audit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Perform an analysis on git repositories in subdirectories to check for dirty branches",
   "main": "dist/index.js",
   "bin": {

@@ -32,7 +32,7 @@ git-audit [directory] [--max-depth={2}]
 
 ## Release History
 
-* 1.0.3
+* 1.0.4
     * CHANGE: Added Readme
     * CHANGE: Replaced string#replaceAll() with custom function
 * 1.0.1
