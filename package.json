@@ -1,6 +1,6 @@
 {
   "name": "git-audit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Perform an analysis on git repositories in subdirectories to check for dirty branches",
   "main": "dist/index.js",
   "bin": {
@@ -24,7 +24,6 @@
   "license": "MIT",
   "dependencies": {
     "colors": "^1.4.0",
-    "git-audit": "^1.0.0",
     "minimist": "^1.2.8"
   },
   "devDependencies": {

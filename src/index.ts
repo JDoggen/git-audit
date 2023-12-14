@@ -46,7 +46,7 @@ async function run() {
         ];
 
         statusList.forEach((record) => {
-            record.path = record.path.replace(path.replaceAll('\\\\', '\\'), '.\\');
+            record.path = record.path.replace(replaceAll(path, '\\\\', '\\'), '.\\');
         })
 
         for (const column of columns) {
@@ -185,10 +185,10 @@ function getLocalBranch(stdout: string, gitStatus: GitStatus): void {
 function getUpstreamBranch(stdout: string, gitStatus: GitStatus): void {
     const line = stdout.split('\n')[1];
     if (line && line.indexOf('Your branch is up to date with') >= 0) {
-        gitStatus.upstreamBranch = line.split('Your branch is up to date with')[1].trim().replaceAll('\'', '').replaceAll('.', '');
+        gitStatus.upstreamBranch = replaceAll(replaceAll(line.split('Your branch is up to date with')[1].trim(), '\'', ''), '.', '');
         gitStatus.ahead = 'no';
     } else if (line && line.indexOf('Your branch is ahead of') >= 0) {
-        gitStatus.upstreamBranch = line.split('Your branch is ahead of')[1].split(' ')[1].trim().replaceAll('\'', '').replaceAll('.', '');
+        gitStatus.upstreamBranch = replaceAll(replaceAll(line.split('Your branch is ahead of')[1].split(' ')[1].trim(), '\'', ''), '.', '');
         gitStatus.ahead = 'yes';
     } else {
         gitStatus.upstreamBranch = 'unknown';
@@ -231,6 +231,13 @@ function rightPad(value: string, length: number, character: string = ' '): strin
     return value;
 }
 
+
+function replaceAll(value: string, searchValue: string, replaceValue: string): string {
+    while(value.indexOf(searchValue) >= 0) {
+        value = value.replace(searchValue, replaceValue);
+    }
+    return value;
+}
 
 run();
 
