@@ -1,0 +1,34 @@
+{
+  "name": "git-audit",
+  "version": "1.0.0",
+  "description": "Perform an analysis on git repositories in subdirectories to check for dirty branches",
+  "main": "dist/index.js",
+  "bin": {
+    "git-audit": "dist/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node dist/index.js"
+  },
+  "keywords": [
+    "git",
+    "audit",
+    "status",
+    "repository",
+    "repositories"
+  ],
+  "author": {
+    "name": "Jeroen Doggen",
+    "email": "jeroen.npm@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "git-audit": "^1.0.0",
+    "minimist": "^1.2.8"
+  },
+  "devDependencies": {
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^20.10.3"
+  }
+}
