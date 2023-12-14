@@ -25,6 +25,7 @@ Navigate to the top level of your projects directory using the commandline. Then
 git-audit [directory] [--max-depth={2}]
 ```
 
+![Output](https://raw.githubusercontent.com/JDoggen/git-audit/master/assets/markdown/git-audit-output.png)
 
 
 
